@@ -1,0 +1,55 @@
+name: "XLauncher — Bug Report"
+description: "Report a product defect or issue with XLauncher for macOS"
+title: "[XLauncher] "
+labels: ["bug", "XLauncher"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue with **XLauncher**!
+        For general questions or help, please post in the [CyberPatate Discussions forum](https://github.com/CyberPatate/Support/discussions) instead.
+
+  - type: input
+    id: version
+    attributes:
+      label: "XLauncher Version"
+      description: "Which version of XLauncher are you running?"
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: macos_version
+    attributes:
+      label: "macOS Version"
+      description: "Which version of macOS are you using?"
+      placeholder: "e.g. macOS 15.3 (Apple Silicon)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Bug Description"
+      description: "A clear and concise description of what the defect is."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "How can we reproduce the issue?"
+      placeholder: |
+        1. Open XLauncher
+        2. Go to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / Screenshots (Optional)"
+      description: "Attach any relevant logs, crash reports, or screenshots if applicable."

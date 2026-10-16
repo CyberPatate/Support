@@ -1,0 +1,80 @@
+name: "AlphaFloor EFB — Bug Report"
+description: "Report a product defect or issue with AlphaFloor EFB for the ToLiss Airbus fleet"
+title: "[AlphaFloor EFB] "
+labels: ["bug", "AlphaFloorEFB"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue with **AlphaFloor EFB**!
+        For general questions or help, please post in the [CyberPatate Discussions forum](https://github.com/CyberPatate/Support/discussions) instead.
+
+  - type: input
+    id: version
+    attributes:
+      label: "AlphaFloor EFB Version"
+      description: "Which version of AlphaFloor EFB are you running?"
+      placeholder: "e.g. 1.2.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: aircraft
+    attributes:
+      label: "ToLiss Aircraft"
+      description: "Which ToLiss Airbus aircraft is affected?"
+      options:
+        - "ToLiss A319"
+        - "ToLiss A320"
+        - "ToLiss A321"
+        - "ToLiss A330-900"
+        - "ToLiss A340-600"
+        - "All / Not aircraft-specific"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "Operating System"
+      description: "Which operating system is running X-Plane 12?"
+      options:
+        - "Windows"
+        - "macOS"
+        - "Linux"
+    validations:
+      required: true
+
+  - type: input
+    id: display_context
+    attributes:
+      label: "Display / Browser (Optional)"
+      description: "Were you using the 3D cockpit tablet or an external web browser (e.g. iPad Safari, Chrome)?"
+      placeholder: "e.g. 3D cockpit tablet / Safari on iPadOS"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Bug Description"
+      description: "A clear and concise description of what the defect is."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "How can we reproduce the issue?"
+      placeholder: |
+        1. Load aircraft at '...'
+        2. Open AlphaFloor EFB and go to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / Screenshots (Optional)"
+      description: "Attach your X-Plane `Log.txt`, screenshots, or relevant console output if applicable."
